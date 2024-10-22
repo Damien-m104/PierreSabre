@@ -19,7 +19,7 @@ public class Humain {
 		return argent;
 	}
 
-	private void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println(texte);
 	}
 
@@ -32,7 +32,7 @@ public class Humain {
 	}
 
 	public void acheter(String bien, int prix) {
-		if (prix <= argent) {
+		if (prix <= getArgent()) {
 			parler("J'ai " + argent + " sous en poche. Je vais pouvoir m'offrir " + bien + " à " + prix + " sous.");
 			argent -= prix;
 		}
@@ -43,11 +43,12 @@ public class Humain {
 		}
 	}
 
-	private void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		argent += gain;
 	}
 
-	private void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		argent -= perte;
 	}
+
 }
