@@ -28,7 +28,7 @@ public class Humain {
 	}
 
 	public void boire() {
-		parler(" Mmmm, un bon verre de " + boissonpref + " ! GLOUPS !");
+		parler("Mmmm, un bon verre de " + boissonpref + " ! GLOUPS !");
 	}
 
 	public void acheter(String bien, int prix) {
